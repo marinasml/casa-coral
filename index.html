@@ -108,7 +108,7 @@ for(var i=0;i<f.getDay();i++)h+='<td></td>';
 for(var dd=1;dd<=n;dd++){var x=new Date(y,m,dd),c=x<hoje?'pa':(busy(x)?'oc':'');if(+x===+hoje)c+=' hj';
 h+='<td class="'+c+'"'+(c.indexOf('oc')>-1?' title="Reservado"':'')+'>'+dd+'</td>';if((f.getDay()+dd)%7===0&&dd<n)h+='</tr><tr>';}
 return h+'</tr></tbody></table></div>';}
-function draw(){var h='';for(var m=0;m<12;m++)h+=mes(ano,m);el.innerHTML=h;
+function draw(){var h='',m0=(ano===hoje.getFullYear())?hoje.getMonth():0;for(var m=m0;m<12;m++)h+=mes(ano,m);el.innerHTML=h;
 for(var i=0;i<bt.length;i++)bt[i].setAttribute('aria-pressed',+bt[i].dataset.y===ano);}
 for(var i=0;i<bt.length;i++)bt[i].onclick=function(){ano=+this.dataset.y;draw();};
 fetch('disponibilidade.json?v='+Date.now()).then(function(r){return r.json();}).then(function(j){
