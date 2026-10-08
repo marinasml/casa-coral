@@ -38,9 +38,9 @@ footer{padding:48px 0 60px;text-align:center;font-size:18px}footer .sig{display:
 .cal{display:grid;gap:26px 30px;margin-top:22px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
 .mes h3{text-transform:capitalize;margin-bottom:10px}.mes table{width:100%;border-collapse:collapse;font-family:Jost,sans-serif;font-size:15px;text-align:center}
 .mes th{font-size:11px;letter-spacing:.12em;color:var(--b2);font-weight:500;padding:6px 0}.mes td{padding:6px 0;border-radius:4px}
-.mes td.oc{background:var(--b2);color:#fff;text-decoration:line-through}.mes td.pa{color:#b5c2ca}.mes td.hj{outline:1px solid var(--b1)}
+.mes td{padding:2px 0}.mes td button{font:inherit;color:inherit;background:none;border:0;width:100%;padding:6px 0;border-radius:4px;cursor:pointer}.mes td button:hover{background:var(--b3)}.mes td:not(:has(button)){padding:8px 0}.mes td.oc{background:var(--b2);color:#fff;text-decoration:line-through;border-radius:4px}.mes td.pa{color:#b5c2ca}.mes td.hj{outline:1px solid var(--b1);border-radius:4px}.mes td.fe{box-shadow:inset 0 -3px 0 var(--b2)}.mes td.sel{background:var(--b1);color:#fff}.mes td.sel button:hover{background:transparent}.mes td.ini{background:var(--b1);color:#fff;border-radius:4px}.mes td.min{background:var(--b3)}.orc{display:grid;gap:18px;margin-top:30px;background:var(--paper);border-radius:8px;padding:22px}@media(min-width:860px){.orc{grid-template-columns:1fr 1.4fr;align-items:start}}.orc .datas{display:grid;grid-template-columns:1fr 1fr;gap:12px;font-family:Jost,sans-serif}.orc .datas b{display:block;font-family:"Cormorant Garamond",serif;font-size:22px;color:var(--b1);font-weight:600}.orc form{display:grid;gap:12px;grid-template-columns:1fr 1fr;font-family:Jost,sans-serif;font-size:14px}.orc label{display:grid;gap:4px;color:var(--b2);min-width:0}.orc .full{grid-column:1/-1}.orc input,.orc select{font:16px Jost,sans-serif;color:var(--ink);background:#fff;border:1px solid var(--b3);border-radius:6px;padding:10px;width:100%;min-width:0}.orc button[type=submit]{border:0;cursor:pointer}.orc button[type=submit]:disabled{opacity:.4;cursor:default}.linkbtn{background:none;border:0;color:var(--b2);text-decoration:underline;cursor:pointer;font:13px Jost,sans-serif;padding:0;justify-self:start}.calmsg{font-family:Jost,sans-serif;font-size:14px;color:var(--b2);min-height:20px}.calmsg.erro{color:#A4473C}
 .calnav{display:flex;gap:10px;align-items:center;margin-top:18px}.calnav button{font-family:Jost,sans-serif;font-size:13px;letter-spacing:.1em;text-transform:uppercase;background:transparent;border:1px solid var(--b1);color:var(--b1);border-radius:40px;padding:9px 18px;cursor:pointer}.calnav button[aria-pressed=true]{background:var(--b1);color:#fff}
-.leg{font-family:Jost,sans-serif;font-size:13px;color:var(--b2);display:flex;gap:18px;flex-wrap:wrap;margin-top:14px}.leg i{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px;border:1px solid var(--b3)}.leg i.o{background:var(--b2)}
+.leg{font-family:Jost,sans-serif;font-size:13px;color:var(--b2);display:flex;gap:18px;flex-wrap:wrap;margin-top:14px}.leg i{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px;border:1px solid var(--b3)}.leg i.o{background:var(--b2)}.leg i.f{box-shadow:inset 0 -3px 0 var(--b2)}.leg i.s{background:var(--b1)}
 </style></head><body>
 <header class="hero"><img src="img/gramado-frente-mar.jpg" alt="Gramado da Casa Coral de frente para o mar na Praia do Saco" width="480" height="640" class=""  decoding="async">
 <div class="in"><svg viewBox="0 0 300 300" width="230" height="230" role="img" aria-label="Casa Coral, Praia do Saco, Sergipe" xmlns="http://www.w3.org/2000/svg"><defs><path id="arc" d="M40 150a110 110 0 0 1 220 0"/><path id="arc2" d="M52 160a98 98 0 0 0 196 0"/></defs>
@@ -78,16 +78,23 @@ footer{padding:48px 0 60px;text-align:center;font-size:18px}footer .sig{display:
 <div><div class="k">A Praia do Saco</div><h2>Mar calmo <i>e pôr do sol nas dunas</i></h2><p>A Praia do Saco fica no litoral sul de Sergipe, em Estância. Na maré baixa o mar fica calmo e raso, e pertinho da casa tem dunas para ver o pôr do sol.</p></div>
 </div></section>
 <section class="lt" id="disponibilidade"><div class="wrap">
-<div class="k">Disponibilidade</div><h2>Datas <i>livres</i></h2>
-<p style="max-width:720px">Os dias riscados já estão reservados. O dia de saída de um grupo fica livre para a chegada do próximo. Para confirmar valores e datas, chame no Direct.</p>
+<div class="k">Disponibilidade e orçamento</div><h2>Escolha <i>suas datas</i></h2>
+<p style="max-width:720px">Toque no dia da chegada e depois no dia da saída. Os dias riscados já estão reservados. O mínimo é de 2 diárias, e nos feriados marcados a casa é alugada em pacote fechado. Depois é só pedir o orçamento: respondemos com os valores e a apresentação da casa.</p>
 <div class="calnav"><button type="button" data-y="2026">2026</button><button type="button" data-y="2027">2027</button></div>
 <div class="cal" id="cal"><p class="cap">Carregando o calendário…</p></div>
-<div class="leg"><span><i></i>Livre</span><span><i class="o"></i>Reservado</span><span id="calup"></span></div>
+<div class="leg"><span><i></i>Livre</span><span><i class="o"></i>Reservado</span><span><i class="f"></i>Feriado, pacote fechado</span><span><i class="s"></i>Suas datas</span><span id="calup"></span></div>
+<div class="orc"><div><div class="datas"><div><span class="k">Chegada</span><b id="o-in">Escolha no calendário</b></div><div><span class="k">Saída</span><b id="o-out">—</b></div></div>
+<p class="calmsg" id="calinfo" aria-live="polite"></p><button type="button" class="linkbtn" id="o-limpar">Limpar datas</button></div>
+<form id="orc"><label>Quantas pessoas<select name="pessoas" id="o-pes"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option selected>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option></select></label>
+<label>Seu nome<input name="nome" id="o-nome" autocomplete="name"></label>
+<label class="full">Observação (opcional)<input name="obs" id="o-obs" placeholder="Ex.: vamos com crianças, chegamos à noite"></label>
+<div class="full"><button class="btn dark" type="submit" id="o-btn" disabled>Pedir orçamento pelo Direct</button>
+<p class="cap" id="o-copiado" hidden style="margin-top:10px">Copiamos sua mensagem. No Direct, é só colar e enviar.</p></div></form></div>
 </div></section>
 <section><div class="wrap two">
 <div><div class="k">Como reservar</div><h2>Vamos marcar <i>sua temporada?</i></h2>
 <ol class="steps" style="color:var(--ink)">
-<li>Veja as <a href="#disponibilidade">datas livres</a> e mande no Direct as datas e quantas pessoas vêm.</li><li>Confirmamos a disponibilidade e os valores.</li><li>Fechamos com contrato de locação para temporada.</li><li>Check-in a partir das 11h e check-out até as 12h.</li></ol>
+<li>Escolha as datas no <a href="#disponibilidade">calendário</a> e peça o orçamento.</li><li>Confirmamos a disponibilidade e os valores.</li><li>Fechamos com contrato de locação para temporada.</li><li>Check-in a partir das 11h e check-out até as 12h.</li></ol>
 <div class="btns" style="justify-content:flex-start"><a class="btn dark" href="https://ig.me/m/casacoral.praiadosaco" target="_blank" rel="noopener">Reservar pelo Direct</a><a class="btn ghostd" href="https://www.airbnb.com.br/rooms/1789306204319075808" target="_blank" rel="noopener">Ver no Airbnb</a></div></div>
 <div><div class="k">Bom saber</div><details><summary>Quantas pessoas a casa recebe?</summary><p>Até 16 pessoas, em 5 suítes com ar-condicionado divididas entre a casa principal e a casa de hóspedes.</p></details><details><summary>A casa é mesmo frente mar?</summary><p>Sim. O gramado da casa fica de frente para o mar e tem saída exclusiva para a praia.</p></details><details><summary>A cozinheira está inclusa?</summary><p>Sim, cozinheira e caseiro estão inclusos. Os ingredientes ficam por conta dos hóspedes, e oferecemos o serviço de cardápio e compras à parte.</p></details><details><summary>Posso levar meu pet?</summary><p>Pets são aceitos mediante consulta. Conte para a gente no Direct quem vem junto.</p></details><details><summary>Qual o horário de check-in e check-out?</summary><p>Check-in a partir das 11h e check-out até as 12h.</p></details><details><summary>Pode fazer festa ou evento?</summary><p>Não. A casa é para temporada em família e com amigos; festas e eventos não são permitidos.</p></details><details><summary>Como faço para reservar?</summary><p>Mande no Direct do Instagram @casacoral.praiadosaco as datas e o número de pessoas. Confirmamos disponibilidade e valores e fechamos com contrato de locação para temporada.</p></details></div>
 </div></section>
@@ -95,26 +102,5 @@ footer{padding:48px 0 60px;text-align:center;font-size:18px}footer .sig{display:
 <footer class="lt"><div class="wrap"><div class="sig"><svg viewBox="20 30 160 170" width="28" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><g fill=none stroke-linecap=round stroke-linejoin=round ><g stroke="#7E95A3" stroke-width="11"><path d="M100 192C100 178 99 166 100 150"/><path d="M100 150C92 135 76 130 66 116"/><path d="M66 116C58 106 56 94 46 86"/><path d="M66 116C56 116 44 112 34 104"/><path d="M52 92C50 80 54 70 50 58"/><path d="M100 150C108 135 124 130 134 116"/><path d="M134 116C142 106 144 94 154 86"/><path d="M134 116C144 116 156 112 166 104"/><path d="M148 92C150 80 146 70 150 58"/><path d="M100 156C102 132 96 112 100 92"/><path d="M100 92C98 78 88 70 84 56"/><path d="M100 92C104 76 114 70 116 54"/><path d="M86 62C80 54 76 50 74 40"/><path d="M114 60C120 52 124 50 126 40"/><path d="M80 128C78 114 82 106 78 96"/><path d="M120 128C122 114 118 106 122 96"/></g></g></svg>Casa Coral</div>
 <p style="margin-top:12px">Rua Aristeu Barbosa, Condomínio Villagio Alfredo Gentil<br>Praia do Saco, Estância, Sergipe, CEP 49200-000</p>
 <p style="margin-top:12px"><a href="https://www.instagram.com/casacoral.praiadosaco/" target="_blank" rel="noopener">@casacoral.praiadosaco</a> · reservas pelo Direct</p></div></footer>
-<script>
-(function(){
-var M=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
-var occ=[],hoje=new Date();hoje.setHours(0,0,0,0);
-var ano=Math.min(2027,Math.max(2026,hoje.getFullYear())),el=document.getElementById('cal'),bt=document.querySelectorAll('.calnav button');
-function d(s){var p=String(s).trim().split(/[-/]/);if(p.length!==3)return null;var y,m,dd;if(p[0].length===4){y=+p[0];m=+p[1];dd=+p[2];}else{dd=+p[0];m=+p[1];y=+p[2];}var r=new Date(y,m-1,dd);return isNaN(r)?null:r;}
-function busy(x){for(var i=0;i<occ.length;i++)if(x>=occ[i][0]&&x<occ[i][1])return true;return false;}
-function mes(y,m){var f=new Date(y,m,1),n=new Date(y,m+1,0).getDate(),h='<div class="mes"><h3>'+M[m]+' '+y+'</h3><table><thead><tr>';
-['D','S','T','Q','Q','S','S'].forEach(function(w){h+='<th>'+w+'</th>';});h+='</tr></thead><tbody><tr>';
-for(var i=0;i<f.getDay();i++)h+='<td></td>';
-for(var dd=1;dd<=n;dd++){var x=new Date(y,m,dd),c=x<hoje?'pa':(busy(x)?'oc':'');if(+x===+hoje)c+=' hj';
-h+='<td class="'+c+'"'+(c.indexOf('oc')>-1?' title="Reservado"':'')+'>'+dd+'</td>';if((f.getDay()+dd)%7===0&&dd<n)h+='</tr><tr>';}
-return h+'</tr></tbody></table></div>';}
-function draw(){var h='',m0=(ano===hoje.getFullYear())?hoje.getMonth():0;for(var m=m0;m<12;m++)h+=mes(ano,m);el.innerHTML=h;
-for(var i=0;i<bt.length;i++)bt[i].setAttribute('aria-pressed',+bt[i].dataset.y===ano);}
-for(var i=0;i<bt.length;i++)bt[i].onclick=function(){ano=+this.dataset.y;draw();};
-fetch('disponibilidade.json?v='+Date.now()).then(function(r){return r.json();}).then(function(j){
-(j.ocupado||[]).forEach(function(p){var a=d(p[0]),b=d(p[1]);if(a&&b&&b>a)occ.push([a,b]);});
-if(j.atualizado)document.getElementById('calup').textContent='Atualizado em '+j.atualizado;draw();
-}).catch(function(){draw();});
-})();
-</script>
+<script>window.CC_CFG={"canal": "ig", "dm": "https://ig.me/m/casacoral.praiadosaco"};</script><script src="calendario.js?v=00639e51" defer></script>
 </body></html>
