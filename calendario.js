@@ -57,7 +57,7 @@ function resumo(msg){
   var p=ci&&co?problema(ci,co):'';
   info.textContent=msg||p||(ci&&!co?(pacDe(ci)?'':'Mínimo de '+minimo+' diárias.'):'');
   info.className='calmsg'+((msg||p)?' erro':'');
-  var off=!(ci&&co&&!p);document.getElementById('o-btn').disabled=off;var mb=document.getElementById('o-mail');if(mb)mb.disabled=off;
+  var off=!(ci&&co&&!p);var ob=document.getElementById('o-btn');if(ob)ob.disabled=off;var mb=document.getElementById('o-mail');if(mb)mb.disabled=off;
 }
 el.addEventListener('click',function(e){
   var b=e.target.closest('button[data-d]');if(!b)return;
@@ -71,7 +71,7 @@ document.getElementById('o-limpar').onclick=function(){ci=co=null;draw();};
 document.getElementById('orc').addEventListener('submit',function(e){
   e.preventDefault();if(!(ci&&co)||problema(ci,co))return;
   var f=e.target,nome=f.nome.value.trim(),pes=f.pessoas.value,obs=f.obs.value.trim(),tel=f.tel.value.trim(),em=f.email.value.trim();
-  var via=(e.submitter&&e.submitter.value)||'dm',env=document.getElementById('o-env');
+  var via=(e.submitter&&e.submitter.value)||(document.getElementById('o-btn')?'dm':'email'),env=document.getElementById('o-env');
   var txt='Olá! Vi o site da Casa Coral e gostaria de um orçamento.\n'+(nome?'Nome: '+nome+'\n':'')+(tel?'WhatsApp: '+tel+'\n':'')+'Chegada: '+br(ci)+'\nSaída: '+br(co)+' ('+nt(noites(ci,co))+')\nPessoas: '+pes+(obs?'\nObservação: '+obs:'');
   if(via==='email'&&CFG.w3f){
     if(!nome||tel.replace(/\D/g,'').length<10){env.hidden=false;env.className='cap full calmsg erro';env.textContent='Para enviar o pedido, preencha seu nome e seu WhatsApp com DDD.';return;}
@@ -83,7 +83,7 @@ document.getElementById('orc').addEventListener('submit',function(e){
     .then(function(r){return r.json();}).then(function(j){
       if(j&&j.success){env.textContent='Pedido enviado! Vamos responder no seu WhatsApp com os valores e a apresentação da casa.';env.className='cap full';}
       else throw 0;
-    }).catch(function(){env.className='cap full calmsg erro';env.textContent='Não conseguimos enviar agora. Tente de novo ou use o botão do Direct.';b.disabled=false;});
+    }).catch(function(){env.className='cap full calmsg erro';env.textContent='Não conseguimos enviar agora. Tente de novo em instantes.';b.disabled=false;});
     return;
   }
   if(CFG.canal==='wa'&&CFG.w){
